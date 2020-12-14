@@ -28,18 +28,18 @@ function draw() {
 
   if(collided(bullet,bar)){
     bullet.velocityX=0;
-    var damage=0.5* weight * speed/(thickness * thickness * thickness);
+    var damage=0.5* weight * speed * speed/(thickness * thickness * thickness);
   }
   
     if(damage>10)
     {
-    bar.shapeColor=color("red");
+    bar.shapeColor="red";
     }
   
   
     if(damage<10)
     {
-    bar.shapeColor=color("green");
+    bar.shapeColor=color="green";
     }
   
 
@@ -55,9 +55,9 @@ barLeftEdge=bar.x;
 if(bulletRightEdge>=barLeftEdge)
 {
 return true
-}
+}  else{
 return false;
-
+}
 
 
 
